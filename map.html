@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 570px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Gender Neutral Bathrooms</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: {lat: 40, lng: -95}
+        });
+        // NOTE: This uses cross-domain XHR, and may not work on older browsers.
+        map.data.loadGeoJson(
+        'https://storage.googleapis.com/mapsdevsite/json/google.json');
+      }
+
+      //https://stackoverflow.com/questions/133925/javascript-post-request-like-a-form-submit
+      //This function is for the POST call for Yelp API
+      function post(path, params, method) {
+        method = method || "post"; // Set method to post by default if not specified.
+
+        // The rest of this code assumes you are not using a library.
+        // It can be made less wordy if you use one.
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
+
+        for(var key in params) {
+            if(params.hasOwnProperty(key)) {
+                var hiddenField = document.createElement("input");
+                hiddenField.setAttribute("type", "hidden");
+                hiddenField.setAttribute("name", key);
+                hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+        }
+      }
+      post('https://api.yelp.com/oauth2/token', {grant_type:'', client_id: 'S2UiFyeTpuc7JjxjbUe3Mw', client_secret:'xiA1qJv3t7vzPBjUPlhAekrVvcnzZ3ey00BViO6i5aj7Sxli3zS3r9TLNNhHvicC'});
+
+
+    document.body.appendChild(form);
+    form.submit();
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqZ9t8KkoZPAyoN1BkpDKgbsN1h4ZF630&callback=initMap">
+    </script>
+  </body>
+</html>
