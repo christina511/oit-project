@@ -9,9 +9,8 @@ token = requests.post('https://api.yelp.com/oauth2/token', data=data)
 access_token = token.json()['access_token']
 url = 'https://api.yelp.com/v3/businesses/search'
 headers = {'Authorization': 'bearer %s' % access_token}
-params = {'location': 'San Bruno',
-          'term': 'Japanese Restaurant',
-          'pricing_filter': '1, 2',
+params = {'location': New York',
+          'term': 'Gender Neutral Bathroom',
           'sort_by': 'rating'
          }
 
