@@ -6,8 +6,8 @@ map 3: playing around with code in a new file, still receives both errors <br />
 map 4: added on to map 2--manually added several markers, added gnc and trans gradients
 
 <br>
-Thinking about using either Flask/Fetch in order to not run into issues with CORS, as Yelp API does not support it: <br>
-
+Thinking about using either Flask/Fetch in order to not run into issues with CORS, as Yelp API does not support it: 
+<br>
 
 Stack Overflow w/ example using flask- https://stackoverflow.com/questions/41528407/i-am-trying-to-do-a-yelp-fusion-v3-api-call-in-javascript <br>
 
