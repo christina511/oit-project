@@ -10,3 +10,6 @@ Stack Overflow w/ example using flask- https://stackoverflow.com/questions/41528
 Yelp Developer's Authentication steps- https://www.yelp.com/developers/documentation/v3/authentication <br>
 Guide to getting an access token from Postman- jacklyons.me/yelp-fusion-api-access-token/ <br>
 Info about Fetch-  https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API <br>
+Info about Flask- https://github.com/pallets/flask
+Quora on linking python code to HTML file- https://www.quora.com/How-can-I-link-python-code-with-HTML
+In-depth guide to using python for web development- https://docs.python.org/2/howto/webservers.html
